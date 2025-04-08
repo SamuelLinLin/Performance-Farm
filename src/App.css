@@ -1,38 +1,108 @@
 .App {
   text-align: center;
+  flex-direction: row;
+  display: flex;
+  gap: 0px;
+  height: 96vh;
+  overflow-wrap: break-word;
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Menu {
+  background-color: #e3e7f0;
+  height: 100%;
+  width: 10vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  padding: 15px;
+  font-size: calc(10px + 0.5vmin);
+  text-align: left;
   color: white;
+  gap: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.Drop-button {
+  background-color: #336791;
+  color: white;
+  padding: 20;
+  font-size: calc(10px + 0.5vmin);
+  border: none;
+  cursor: pointer;
+  width: 10vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Dropdown {
+  position: relative;
+  display: inline-block;
+  width: 10vw;
+}
+
+.Dropdown-content {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #5b88ad;
+  position: absolute;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  top: 100%;
+  width: 10w;
+}
+
+.Dropdown:hover .Dropdown-content {
+  display: block;
+}
+
+.Dropdown:hover .Drop-button {
+  background-color: #5b88ad;
+}
+
+.Select-button {
+  background-color: #5b88ad;
+  color: white;
+  padding: 20;
+  font-size: calc(10px + 0.5vmin);
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+}
+
+.Select-button:hover {
+  background-color: #336791;
+}
+
+.Remove-button {
+  background-color: #5b88ad;
+  color: white;
+  padding: 20;
+  font-size: calc(8px + 0.5vmin);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.Remove-button:hover {
+  background-color: #ff4848 !important;
+}
+
+.Chart-container {
+  background-color: #f3f3fa;
+  height: 100vh;
+  min-width: 88vw;
+}
+
+.BranchDisplay {
+  width: 9.5vw;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  background-color: #336791;
+  margin-top: 0px;
+  padding: 5px;
 }
